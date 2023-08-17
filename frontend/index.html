@@ -4,14 +4,18 @@
     <title>QR Scan</title>
     <script src="https://unpkg.com/html5-qrcode"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="./styles/style.css">
 </head>
 
 <body>
-    <h1>Ecomm-Companion</h1>
+    <div class="header">
+    <h1 class="logoheading">MartCompanion</h1>
+    <img class="logo" src="./assets/walmart-logo-transparent-free-png.jpg"/>
+    </div>
 
+    <div id="result" class="content">
     <div style="width: 500px" id="reader"></div>
-    <div id="result"></div>
-    <div id="heading"></div>
+    </div>
 
     <script src="./scripts/script.js"></script>
 </body>
