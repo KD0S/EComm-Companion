@@ -10,11 +10,6 @@ scanner.render(success, error);
 
 async function success(result)
 {
-    document.getElementById('result').innerHTML = `
-    <h2>Success!<h2>
-    <h2>${result}</h2>
-    `;
-
     getUser(result);
 
     scanner.clear();
@@ -30,8 +25,14 @@ function error(err)
 async function getUser(result) {
     try {
       const response = await axios.get(`http://localhost:3001/api/products/${result}`);
-      console.log(response);
+      document.getElementById('result').innerHTML = `
+    <h1>Product Information</h1>
+    <h1>Name : ${response.data.name}</h1>
+    <h1>Brand : ${response.data.brand}</h1>
+    <h1>Price : ${response.data.price}</h1>
+    `;
     } catch (error) {
       console.error(error);
+      return null;
     }
   }
