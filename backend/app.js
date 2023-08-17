@@ -4,6 +4,9 @@ const app = express()
 const mongoose = require('mongoose')
 const productsRouter = require('./controllers/products') 
 
+const cors = require("cors");
+app.use(cors());
+
 mongoose.set('strictQuery', false)
 
 mongoose.connect(process.env.MONGODB_URI)
