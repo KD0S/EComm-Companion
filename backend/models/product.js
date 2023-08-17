@@ -5,10 +5,42 @@ const productSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+
+    brand: {
+        type: String,
+    },
+
+    department: {
+        type: String,
+        required: true
+    },
+
+    category: {
+        type: String,
+        required: true,
+    },
+
+    subcategory: {
+        type: String
+    },
+    weight: {
+        type: String
+    },
+
+    price: {
+        type: String,
+        required: true
+    },
+
+    specification: {
+        type: String
+    },
+    
     rating: {
         type: Number,
         max: 5
     },
+
     comments: [
         {
             type: mongoose.Schema.Types.ObjectId,
