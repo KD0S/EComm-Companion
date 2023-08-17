@@ -6,6 +6,11 @@ const productSchema = new mongoose.Schema({
         required: true
     },
 
+    imageUrl: {
+        type: String,
+        required: true
+    },
+
     brand: {
         type: String,
     },
