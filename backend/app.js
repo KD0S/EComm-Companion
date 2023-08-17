@@ -20,5 +20,5 @@ mongoose.connect(process.env.MONGODB_URI)
 
 app.use(express.json())
 app.use('/api/products', productsRouter)
-
+app.use(express.static('frontend'))
 module.exports = app
