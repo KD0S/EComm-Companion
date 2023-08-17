@@ -5,12 +5,16 @@
     <script src="https://unpkg.com/html5-qrcode"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 
 <body>
     <div class="header">
     <h1 class="logoheading">MartCompanion</h1>
     <img class="logo" src="./assets/walmart-logo-transparent-free-png.jpg"/>
+    <div class="spacer"></div>
+    <input class="searchbar" type="text" id="search">
+    <button id="submitButton"><i class="fas fa-search"></i></button>
     </div>
 
     <div id="result" class="content">

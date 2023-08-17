@@ -16,9 +16,9 @@ productsRouter.get('/', async (request, response)=>{
 })
 
 productsRouter.get('/chat', async (request, response)=>{
-    const description = request.body.description
-    const products = await Product.find({}, {price:0, specification: 0, rating: 0, comments: 0,
-    _id: 0, __v: 0})
+    const description = request.query.description
+    const products = await Product.find({}, { price:0, imageUrl:0,  specification: 0, rating: 0, comments: 0,
+    _id: 0, __v: 0 })
     const params = {
         messages: [{"role": "user", "content": `find the most likely item from this json list - ${products} based
         on this description - ${description}`}],
