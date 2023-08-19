@@ -17,11 +17,10 @@ productsRouter.get('/', async (request, response)=>{
 
 productsRouter.get('/chat', async (request, response)=>{
     const description = request.query.description
-    const products = await Product.find({}, { price:0, imageUrl:0,  specification: 0, rating: 0, comments: 0,
-    _id: 0, __v: 0 })
+    const products = await Product.find({}, { price:0, imageUrl:0,  specification: 0, rating: 0, comments: 0, __v: 0 })
     const params = {
-        messages: [{"role": "user", "content": `find the most likely item from this json list - ${products} based
-        on this description - ${description}`}],
+        messages: [{"role": "user", "content": `Do not repsond with any words, the only thing I want from you is the id number. find the item from this json list - ${products} based
+        on this description - ${description} and your response should only be the id`}],
         model: "gpt-3.5-turbo",
       };
       client

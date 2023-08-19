@@ -36,7 +36,7 @@ axios
         { params: { description: `${prompt}` } }
     )
     .then(function (response) {
-        console.log(response);
+        getUser(response.data)
     })
     .catch(function (error) {
         console.error(error);
